@@ -1,0 +1,19 @@
+{
+  "name": "next-ts-project-template",
+  "version": "1.0.0",
+  "description": "Template for creating a new project using NextJS and TS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/softwarebygabe/next-ts-project-template.git"
+  },
+  "author": "Gabe Szczepanek",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/softwarebygabe/next-ts-project-template/issues"
+  },
+  "homepage": "https://github.com/softwarebygabe/next-ts-project-template#readme"
+}
