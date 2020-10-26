@@ -4,9 +4,11 @@
   "description": "Template for creating a new project using NextJS and TS",
   "main": "index.js",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start"
+    "dev": "ts-node --project tsconfig.server.json server/index.ts",
+    "build:server": "tsc --project tsconfig.server.json",
+    "build:next": "next build",
+    "build": "npm run build:next && npm run build:server",
+    "start": "NODE_ENV=production node dist/index.js"
   },
   "repository": {
     "type": "git",
@@ -19,7 +21,9 @@
   },
   "homepage": "https://github.com/softwarebygabe/next-ts-project-template#readme",
   "dependencies": {
+    "axios": "^0.21.0",
     "date-fns": "^2.16.1",
+    "express": "^4.17.1",
     "gray-matter": "^4.0.2",
     "next": "9.5.5",
     "react": "17.0.1",
@@ -29,8 +33,11 @@
     "swr": "^0.3.6"
   },
   "devDependencies": {
+    "@types/axios": "^0.14.0",
+    "@types/express": "^4.17.8",
     "@types/node": "14.14.2",
     "@types/react": "16.9.53",
+    "ts-node": "^9.0.0",
     "typescript": "4.0.3"
   }
 }
